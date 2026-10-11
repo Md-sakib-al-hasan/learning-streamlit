@@ -67,11 +67,14 @@ def logarithm(x: float, base: float = 10) -> float:
 # ==============================================================================
 
 def run_calculator_app():
-    st.set_page_config(
-        page_title="Streamlit Calculator",
-        page_icon="🧮",
-        layout="centered"
-    )
+    try:
+        st.set_page_config(
+            page_title="Streamlit Calculator",
+            page_icon="🧮",
+            layout="centered"
+        )
+    except Exception:
+        pass
 
     st.title("🧮 Comprehensive Calculator App")
     st.write("Perform standard calculations, scientific math, and use an interactive keypad.")
